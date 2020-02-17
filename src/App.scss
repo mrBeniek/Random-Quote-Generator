@@ -11,10 +11,6 @@ body {
 }
 
 #main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -48,7 +44,7 @@ body {
 
 #text-bg {
   
- // background-color: orange;
+ //background-color: orange;
   border-radius: 8px;
   color: $color;
   height: 450px;
@@ -405,3 +401,51 @@ body {
     font-size: 1.6em;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  #main-container {
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #quote-box {
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  #text-container {
+    padding: 12px 5px 30px 5px;
+  }
+
+  #text {
+    font-size: 1.1em;
+  }
+  
+  #author {
+    font-size: 1.3em;
+  }
+
+  #new-quote {
+    font-size: 2em;
+    padding: 8px 30px;
+  }
+
+  #tweet-quote {
+    font-size: 2em;
+    padding: 8px 23px;
+  }
+ }
+
+ @media only screen and (max-height: 580px) {
+  #new-quote {
+    font-size: 1.8em;
+    padding: 8px 30px;
+  }
+
+  #tweet-quote {
+    font-size: 1.8em;
+    padding: 8px 23px;
+  }
+ }
