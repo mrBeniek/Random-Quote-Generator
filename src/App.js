@@ -149,7 +149,7 @@ render() {
          
           <NewQuote handleClick={this.handleClick} done={this.state.done} />
          
-          <TweetQuote res={this.state.res} author={this.state.author} />
+          <TweetQuote res={this.state.res} author={this.state.author} done={this.state.done} />
           
         </div>
       </div>
