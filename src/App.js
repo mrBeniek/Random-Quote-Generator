@@ -50,7 +50,7 @@ componentWillMount() {
 
 handleClick() {
   
-  if (this.state.done == false || this.state.animationStatus == "on") {return}
+  if (this.state.done === false || this.state.animationStatus === "on") {return}
   
   this.setState({
     animationStatus: "on"
