@@ -43,7 +43,9 @@ class App extends React.Component {
 
   handleClick() {
     
-    if (this.state.done === false || this.state.animationStatus === "on") {return}
+    if (this.state.done === false || this.state.animationStatus === "on") {
+      return
+    }
     
     this.setState({
       animationStatus: "on"
@@ -51,7 +53,8 @@ class App extends React.Component {
     
     setTimeout ( () => {
       this.setState({
-        color: BG_COLORS[Math.floor(Math.random() * BG_COLORS.length)]
+        color: BG_COLORS[Math.floor(Math.random() * BG_COLORS.length)],
+        done: false
       })
     }, 1500)
     
@@ -60,12 +63,6 @@ class App extends React.Component {
         animationStatus: "off"
       })
     }, 6000)
-    
-    setTimeout ( () => {
-      this.setState({
-        done: false
-      })
-    }, 1500)
     
     setTimeout( () => {
       this.setState(state => ({
@@ -81,8 +78,8 @@ class App extends React.Component {
         .map( val => {
           if (val.charCodeAt(0) < 97 || val.charCodeAt(0) > 122 ) {return val};
           return String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1) + 97))
-        }).join("");
-    
+        })
+        .join("");
     
       let shuffleCallback = () => {
         if (prev === quote) {

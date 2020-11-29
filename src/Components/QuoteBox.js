@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const QuoteBox = (props) => {
-  
+
   const STATIC_TEXT =
     <h1 id="text" style={props.textChange}>
       "{props.res}"
@@ -42,11 +42,11 @@ export const QuoteBox = (props) => {
     <div id="quote-box">
       <div id="text-bg">
         <div id="text-container">
-          {props.animationStatus == "off" ? STATIC_TEXT : ANIM_TEXT}
+          {props.animationStatus === "off" ? STATIC_TEXT : ANIM_TEXT}
           {props.done ? ANIM_AUTHOR : HIDDEN_AUTHOR}
         </div>
-        {props.animationStatus == "off" ? STATIC_BOX1 : ANIM_BOX1}
-        {props.animationStatus == "off" ? STATIC_BOX2 : ANIM_BOX2}
+        {props.animationStatus === "off" ? STATIC_BOX1 : ANIM_BOX1}
+        {props.animationStatus === "off" ? STATIC_BOX2 : ANIM_BOX2}
       </div>
     </div>
   );
